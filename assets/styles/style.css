@@ -60,6 +60,7 @@ h6 {
   gap: 64px;
 }
 
+
 .board {
   display: flex;
   justify-content: space-between;
@@ -70,26 +71,32 @@ h6 {
 
 }
 
-.score {
+.sayac, .win, .berabere , .kayip {
   background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
   box-shadow: 0px 3px 3px 0px #00000032;
   border-radius: 8px;
-  padding: 16px 47px;
+  padding: 16px 20px;
   text-align: center;
+  width: 100px;
 }
 
-.score p {
+.tablo p {
   color: #2c33b6;
   font-weight: bold;
   padding: 0;
   margin: 0;
 }
 
-.score h1 {
+.tablo h1 {
   padding: 0;
   margin: 0;
   font-size: 56px;
   color: #3b3b48;
+}
+
+.tablo {
+  display: flex;
+  gap: 20px;
 }
 
 .uclu {
@@ -108,7 +115,6 @@ h6 {
 }
 
 .uclu button {
-  width: 100%;
   border-radius: 50%;
   border: none;
   background-color: transparent;
@@ -118,6 +124,11 @@ h6 {
   width: 100%;
   cursor: pointer;
 }
+.kagit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .rules-body {
   width: 1024px;
@@ -126,21 +137,20 @@ h6 {
 }
 
 .rules {
-  width: 130px;
   margin-right: 32px;
   border: 1px solid #FFFFFF;
   border-radius: 10px;
 }
 
-.rules a {
+.rules button {
   font-size: 16px;
   color: #FFFFFF;
   padding: 11px 37px;
+  border: none;
+  border-radius: 10px;
 }
 
-.uclu button:hover {
-  background-image: url(/tas-kagit-makas/assets/img/hover+.png);
-}
+
 
 .text {
   display: flex;
@@ -171,6 +181,9 @@ h6 {
 .sonuc-text {
   font-size: 56px;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .sonuc-text button {
@@ -184,26 +197,56 @@ h6 {
   font-weight: 600;
   line-height: 19.2px;
   letter-spacing: 2.5px;
-  text-align: left;
+  text-align: center;
 
+}
+.sonuc-text button:hover {
+  color: #DB2E4D;
+}
+.oyunnn {
+  display: none;
+}
+.oyun-sonux {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.sonuc-te {
+  font-size: 40px;
+  text-align: center;
 }
 
 .step3 {
   gap: 77px;
 }
+.rules-text #span {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+}
 
+.rules-text #span:hover,
+.rules-text #span:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 .rules-tab {
   width: 400px;
-  height: 415px;
+  height: 515px;
   background: #FFFFFF;
   box-shadow: 0px 3px 3px 0px #00000032;
   padding: 32px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 48px;
   border: none;
   border-radius: 15px;
+  position: fixed; /* Yerinde kal */
+  z-index: 1; /* Üstte */
+  left: 400px;
+  top: 200px;
+  overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+  display: none;
 }
 
 .rules-text {
@@ -218,5 +261,6 @@ h6 {
 }
 
 .rules-tab .rul {
+  margin-top: 100px;
   width: 305px;
 }
